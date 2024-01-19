@@ -24,7 +24,7 @@ def webhook():
         return jsonify(rasa_response_json)
     except requests.exceptions.RequestException as e:
         logging.error(f"Error communicating with Rasa: {e}")
-        return jsonify({'response': 'Sorry, there was an error processing your request.'}), 503
+        return jsonify({'response': 'Sorry, there was an error processing your request!'}), 503
 
 
 if __name__ == "__main__":
