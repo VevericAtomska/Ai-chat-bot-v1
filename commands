@@ -1,0 +1,22 @@
+STEP 1
+Virtuelno okruzenje:
+conda create --name rasachatbot 
+conda activate rasachatbot
+
+STEP 2
+python -m pip uninstall pip
+python -m ensurepip
+python -m pip install -U pip
+pip install rasa -> inicijalizacija ai chatbot-a
+
+STEP 3
+rasa -h
+rasa run --enable-api --cors "*"
+rasa init
+
+Funkcionalnosti rasa bota:
+/stop 
+/restart
+**********************************************
+Error: No module named pip
+Solution for error: conda install -c anaconda pymong
