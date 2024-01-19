@@ -1,0 +1,112 @@
+version: "3.1"
+intents:
+  - show_sweatshirts
+  - greet
+  - goodbye
+  - show_shirts
+  - show_blazzer
+  - show_jackets
+  - show_tshirts
+
+entities:
+  - size
+  - color
+  - clothesId
+
+slots:
+  size:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: size
+  color:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: color
+  clothesId:
+    type: text
+    influence_conversation: false  # or true, depending on whether you want the slot to influence the conversation flow
+    mappings:
+      - type: from_entity
+        entity: clothesId
+
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+  utter_ask_continue:
+    - text: "Is there anything else I can help you with?"
+  utter_ask_category:
+    - text: "Which category are you interested in? Jackets, Shirts, or T-Shirts?"
+  utter_show_sweatshirts:
+    - text: "Here are some sweatshirts for you to check out: ."
+  utter_links_sweathshirts:
+    - text: "Here are some sweathshirts you might like:"
+      buttons:
+        - title: "View Details"
+          payload: '/view_details{{"clothesId":"{clothesId}"}}'
+  utter_add_basket_sweathshirts:
+    - text: "Would you like to add it to the basket?"
+      buttons:
+        - title: "Add To Basket"
+          payload: '/add_to_basket/cart/{{"clothesId":"{clothesId}"}}'
+  utter_show_shirts:
+    - text: "This is the Shirts from our site : "
+  utter_links_shirts:
+    - text: "Here are some shirts you might like:"
+      buttons:
+        - title: "View Details"
+          payload: '/view_details{{"clothesId":"{clothesId}"}}'
+  utter_add_basket_shirts:
+    - text: "Would you like to add it to the basket?"
+      buttons:
+        - title: "Add To Basket"
+          payload: '/add_to_basket/cart/{{"clothesId":"{clothesId}"}}'
+  utter_show_blazzer:
+    - text: "Some cool Blazzer: "
+  utter_links_blazzers:
+    - text: "Here are some blazzers you might like:"
+      buttons:
+        - title: "View Details"
+          payload: '/view_details{{"clothesId":"{clothesId}"}}'
+  utter_add_basket_blazzers:
+    - text: "Would you like to add it to the basket?"
+      buttons:
+        - title: "Add To Basket"
+          payload: '/add_to_basket/cart/{{"clothesId":"{clothesId}"}}'
+  utter_show_jackets:
+    - text: "Here are some Jackets that you might like: "
+  utter_links_jackets:
+    - text: "Here are some jackets you might like:"
+      buttons:
+        - title: "View Details"
+          payload: '/view_details{{"clothesId":"{clothesId}"}}'
+  utter_add_basket_jackets:
+    - text: "Would you like to add it to the basket?"
+      buttons:
+        - title: "Add To Basket"
+          payload: '/add_to_basket/cart/{{"clothesId":"{clothesId}"}}'
+  utter_show_tshirts:
+    - text: "Here are our T-Shirts: "
+  utter_links_tshirts:
+    - text: "Here are some T-Shirts you might like:"
+      buttons:
+        - title: "View Details"
+          payload: '/view_details{{"clothesId":"{clothesId}"}}'
+  utter_add_basket_tshirts:
+    - text: "Would you like to add it to the basket?"
+      buttons:
+        - title: "Add To Basket"
+          payload: '/add_to_basket/cart/{{"clothesId":"{clothesId}"}}'
+
+actions:
+  - action_show_jackets
+  - action_show_sweatshirts
+  - action_show_tshirts
+  - action_show_blazzers
+  - action_show_shirts
