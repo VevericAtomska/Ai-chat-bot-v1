@@ -1,0 +1,62 @@
+[
+  {
+    "clothesId": 1,
+    "image": "/assets/duksevi/duks1.png",
+    "price": 2599,
+    "name": "Ombre",
+    "description": "Men's sweatshirt brand Ombre, hood with laces, elastic cuffs. Material: 95% cotton 5% elastane",
+    "brand": "Ombre",
+    "stars": 3.5,
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "category": "Sweatshirt",
+    "manufacture_date": "2022-07-23"
+  },
+  {
+    "clothesId": 5,
+    "image": "/assets/duksevi/duks2.png",
+    "price": 2799,
+    "name": "Men's  Sweatshirt Trendyol Ekru",
+    "description": "Sweatshirt with hoodie",
+    "brand": "Trendyol",
+    "stars": 3,
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "category": "Sweatshirt",
+    "manufacture_date": "2021-12-01"
+  },
+  {
+    "clothesId": 8,
+    "image": "/assets/duksevi/duks3.png",
+    "price": 3499,
+    "name": "Men's  Sweatshirt with Hoodie",
+    "description": "Light Blue Sweatshirt, 100% cotton",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Tendyol",
+    "stars": 4.5,
+    "category": "Sweatshirt",
+    "manufacture_date": "2022-11-23"
+  },
+  {
+    "clothesId": 18,
+    "image": "/assets/duksevi/dusk4.png",
+    "price": 3999,
+    "name": "Lonsdale London Sweatshirt",
+    "description": "90% cotton, 10% polyester",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Lonsdale",
+    "stars": 4.5,
+    "category": "Sweatshirt",
+    "manufacture_date": "2021-04-13"
+  },
+  {
+    "clothesId": 23,
+    "image": "/assets/duksevi/duks5.png",
+    "price": 2499,
+    "name": "Regular Fit Sweatshirt",
+    "description": "Dark Green Sweatshirt with a Hoodie",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Levis",
+    "stars": 4.5,
+    "category": "Sweatshirt",
+    "manufacture_date": "2023-06-14"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "clothesId": 2,
+    "image": "/assets/kosulje/kosulja1.png",
+    "price": 3500,
+    "name": "Dstreet men white shirt",
+    "description": "Amazing mens patterned shirt. Long sleeves with cuff and adjustable closure. Slim fit cut.",
+    "brand": "Dstreet",
+    "stars": 4.0,
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "category": "Shirt",
+    "manufacture_date": "2023-11-01"
+  },
+  {
+    "clothesId": 7,
+    "image": "/assets/kosulje/kosulja2.png",
+    "price": 2699,
+    "name": "Green sleeve shirt",
+    "description": "85% polyester, 15 % cotton",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Trendyol",
+    "stars": 3,
+    "category": "Shirt",
+    "manufacture_date": "2020-08-03"
+  },
+  {
+    "clothesId": 10,
+    "image": "/assets/kosulje/kosulja3.png",
+    "price": 3899,
+    "name": "Black Polo Shirt",
+    "description": "Long sleeve shirt with 100% comfort",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Marc O Polo",
+    "stars": 5.0,
+    "category": "Shirt",
+    "manufacture_date": "2023-07-23"
+  },
+  {
+    "clothesId": 13,
+    "image": "/assets/kosulje/kosulja4.png",
+    "price": 1599,
+    "name": "Regular Blue Shirt",
+    "description": "Regular size T-Shirt, 90% polyester, 10% cotton",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Trendyol",
+    "stars": 3.0,
+    "category": "Shirt",
+    "manufacture_date": "2021-08-09"
+  },
+  {
+    "clothesId": 17,
+    "image": "/assets/kosulje/kosulja6.png",
+    "price": 5999,
+    "name": "Light Blue sleeve shirt",
+    "description": "Slim Fit light blue shirt, it goes with every suit and color",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Marc O Polo",
+    "stars": 5.0,
+    "category": "Shirt",
+    "manufacture_date": "2024-01-13"
+  }
+]

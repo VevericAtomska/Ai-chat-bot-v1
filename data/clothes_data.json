@@ -1,0 +1,63 @@
+[
+        {
+            "clothesId": 3,
+            "image": "/assets/jakne/jakna1.png",
+            "price": 5000,
+            "name": "Winter Jacket",
+            "description": "Men's short winter jacket, 100% polyester",
+            "brand": "Frogies",
+            "stars": 3,
+            "size": ["S", "M", "L", "XXL", "2XL", "3XL"],
+            "category": "Jacket",
+            "manufacture_date": "2022-05-21"
+        },
+        {
+            "clothesId": 14,
+            "image": "/assets/jakne/jakna2.png",
+            "price": 3999,
+            "name": "Quilted Men's Jacket",
+            "description": "Men's Jacket with a hoodie, waterproof 100%",
+            "brand": "Frogies",
+            "stars": 4.0,
+            "size": ["S", "M", "L", "XXL", "2XL", "3XL"],
+            "category": "Jackets",
+            "manufacture_date": "2022-02-19"
+        },
+        {
+            "clothesId": 21,
+            "image": "/assets/jakne/jakna3.png",
+            "price": 4999,
+            "name": "Men's Jacket Frogies Quilted Black",
+            "description": "Black Frogies Jacket, water resistant",
+            "brand": "Frogies",
+            "stars": 3.0,
+            "size": ["S", "M", "L", "XXL", "2XL", "3XL"],
+            "category": "Jacket",
+            "manufacture_date": "2021-07-28"
+        },
+        {
+            "clothesId": 24,
+            "image": "/assets/jakne/jakna4.png",
+            "price": 7999,
+            "name": "Leather Jacket",
+            "description": "Waterproof leather jacket for bike rides",
+            "brand": "Levis",
+            "stars": 5.0,
+            "size": ["S", "M", "L", "XXL", "2XL", "3XL"],
+            "category": "Jacket",
+            "manufacture_date": "2020-10-07"
+        },
+        {
+            "clothesId": 25,
+            "image": "/assets/jakne/jakna5.png",
+            "price": 2499,
+            "name": "Dstreet Classic Men's Jacket",
+            "description": "Perfect for walks in the park, 100% polyester",
+            "brand": "Dstreet",
+            "stars": 2.0,
+            "size": ["S", "M", "L", "XXL", "2XL", "3XL"],
+            "category": "Jacket",
+            "manufacture_date": "2019-08-30"
+        }
+
+]

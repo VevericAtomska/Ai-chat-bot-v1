@@ -1,0 +1,57 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: show sweatshirts
+  steps:
+    - intent: show_sweatshirts
+    - action: utter_show_sweatshirts
+    - action: action_show_sweatshirts
+    - action: utter_links_sweathshirts
+    - action: utter_add_basket_sweathshirts
+
+- story: show shirts
+  steps:
+    - intent: show_shirts
+    - action: utter_show_shirts
+    - action: action_show_shirts
+    - action: utter_links_shirts
+    - action: utter_add_basket_shirts
+
+- story: show jackets
+  steps:
+    - intent: show_jackets
+    - action: utter_show_jackets
+    - action: action_show_jackets
+    - action: utter_links_jackets
+    - action: utter_add_basket_jackets
+
+- story: show blazzer
+  steps:
+    - intent: show_blazzer
+    - action: utter_show_blazzer
+    - action: action_show_blazzers
+    - action: utter_links_blazzers
+    - action: utter_add_basket_blazzers
+
+- story: show tshirts
+  steps:
+    - intent: show_tshirts
+    - action: utter_show_tshirts
+    - action: action_show_tshirts
+    - action: utter_links_tshirts
+    - action: utter_add_basket_tshirts
+
+
+
+        # - story: User wants to see sweatshirts
+        #  steps:
+        #    - intent: show_sweatshirts
+        #    - action: utter_show_sweatshirts
+        #  - intent: goodbye
+        #    - action: utter_goodbye

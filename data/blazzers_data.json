@@ -1,0 +1,62 @@
+[
+  {
+    "clothesId": 6,
+    "image": "/assets/sakoji/sako1.png",
+    "price": 7800,
+    "name": "Men's  jacket",
+    "description": "Classic Dewberry mens jacket",
+    "brand": "Dewberry",
+    "stars": 5.0,
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "category": "Blazzer",
+    "manufacture_date": "2023-05-16"
+  },
+  {
+    "clothesId": 9,
+    "image": "/assets/sakoji/sako2.png",
+    "price": 12000,
+    "name": "Men's  blazer",
+    "description": "Regular fit, 85% polyester, 10% wool, 5% other",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Jack & Jones",
+    "stars": 4.5,
+    "category": "Blazzer",
+    "manufacture_date": "2023-01-29"
+  },
+  {
+    "clothesId": 11,
+    "image": "/assets/sakoji/sako3.png",
+    "price": 5999,
+    "name": "Dark Blue Jacket",
+    "description": "Men's  jacket Dewberry Classic, 80% polyester",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Dewberry",
+    "stars": 4,
+    "category": "Blazzer",
+    "manufacture_date": "2021-07-23"
+  },
+  {
+    "clothesId": 16,
+    "image": "/assets/sakoji/sako4.png",
+    "price": 10999,
+    "name": "Knit Blazzer Dujess1 - Men",
+    "description": "Blazzer is an essential piece that definitely belongs to men's wardrobe.",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Celio",
+    "stars": 4.5,
+    "category": "Blazzer",
+    "manufacture_date": "2022-09-23"
+  },
+  {
+    "clothesId": 20,
+    "image": "/assets/sakoji/sako5.png",
+    "price": 8399,
+    "name": "Regular Fit Linen Blend Blazer",
+    "description": "Regular Fit Blazzer for men, ideal for weddings",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "DeFacto",
+    "stars": 5.0,
+    "category": "Blazzer",
+    "manufacture_date": "2023-03-24"
+  }
+]

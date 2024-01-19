@@ -1,0 +1,51 @@
+version: "3.1"
+nlu:
+- intent: show_sweatshirts
+  examples: |
+    - Show me [sweatshirts] [1](clothesId)
+    - I want to see [sweatshirts] [5](clothesId)
+    - [Sweatshirts] available
+    - Looking for [sweatshirts]
+
+- intent: show_shirts
+  examples: |
+    - Show me [shirts] [2](clothesId)
+    - I want to see [shirts] [7](clothesId)
+    - [Shirts] available
+    - Looking for [shirts]
+
+- intent: show_jackets
+  examples: |
+    - Show me [jackets] [3](clothesId)
+    - I want to see [jackets] [14](clothesId)
+    - Can you show me your range of [jackets]?
+    - [Jackets] available
+    - I'm looking for [jackets]
+
+- intent: show_tshirts
+  examples: |
+    - Show me [t shirts] [4](clothesId)
+    - I want to see [t shirts] [12](clothesId)
+    - [T shirts] available
+    - Looking  for [t shirts]
+
+- intent: show_blazzer
+  examples: |
+    - Show me [blazzers] [6](clothesId)
+    - I want to see [blazzers] [9](clothesId)
+    - [Blazzers] available
+    - Looking  for [blazzers]
+
+- intent: greet
+  examples: |
+     - Hello
+     - Hi
+     - Hey there
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - Bye 
+    - See you later
+
+

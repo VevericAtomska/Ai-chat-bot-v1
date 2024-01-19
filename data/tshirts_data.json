@@ -1,0 +1,62 @@
+[
+  {
+    "clothesId": 4,
+    "image": "/assets/majce/majca1.png",
+    "price": 1599,
+    "name": "Polo T-Shirt",
+    "description": "100% cotton",
+    "brand": "Marc O Polo",
+    "stars": 5.0,
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "category": "T-Shirt",
+    "manufacture_date": "2019-07-15"
+  },
+  {
+    "clothesId": 12,
+    "image": "/assets/majce/majca2.png",
+    "price": 1399,
+    "name": "Lee Cooper Original",
+    "description": "Light Blue T-Shirt, 85% polyester",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Trendyol",
+    "stars": 3.0,
+    "category": "T-Shirt",
+    "manufacture_date": "2022-09-02"
+  },
+  {
+    "clothesId": 15,
+    "image": "/assets/majce/majca3.png",
+    "price": 1999,
+    "name": "Lee Cooper Navy T-Shirt",
+    "description": "Regular size T-Shirt, 85% polyester, 15% cotton",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Trendyol",
+    "stars": 4.5,
+    "category": "T-Shirt",
+    "manufacture_date": "2023-04-18"
+  },
+  {
+    "clothesId": 19,
+    "image": "/assets/majce/majca4.png",
+    "price": 1699,
+    "name": "Cocaine Lonsdale T-Shirt",
+    "description": "Regular size T-Shirt, 90 % polyester, 10 % cotton",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Lonsdale",
+    "stars": 5.0,
+    "category": "T-Shirt",
+    "manufacture_date": "2023-03-23"
+  },
+  {
+    "clothesId": 22,
+    "image": "/assets/majce/majca5.png",
+    "price": 4999,
+    "name": "White Polo T-Shirt",
+    "description": "Regular size T-Shirt 100% cotton",
+    "size": ["S","M", "L", "XXL", "2XL", "3XL"],
+    "brand": "Marc O Polo",
+    "stars": 5.0,
+    "category": "T-Shirt",
+    "manufacture_date": "2023-12-12"
+  }
+]
