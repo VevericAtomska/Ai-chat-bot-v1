@@ -1,0 +1,137 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+
+}
+
+.cart {
+  object-fit: cover;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+
+.toolbar{
+  display:  flex;
+  justify-content: space-between;
+  background-color: #D0D0D0;
+}
+
+.right-align{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filler{
+  flex-grow: 1;
+}
+
+.transparent-button{
+  background-color: transparent ;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins SemiBold", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: white;
+}
+
+.transparent-button:hover{
+  transition: 3s;
+  background-color: black;
+  opacity: 85%;
+}
+
+
+.editH2{
+  display: inline-block;
+  width: 50px;
+  color: white;
+  font-size: 35px;
+  font-family: "Poppins Black", sans-serif;
+  margin-left: 200px;
+  padding-left: 150px;
+}
+.editH3 {
+  display: inline-block;
+  width: 50px;
+  color: white;
+  font-size: 35px;
+  font-family: "Poppins Black", sans-serif;
+  margin-left: 50px;
+  padding-left: 150px;
+}
+
+.checkout-btn{
+  background-color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 1s;
+  border-right: 40px;
+  letter-spacing: 3px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.checkout-btn:hover {
+  background-color: #D0D0D0;
+  opacity: 100%
+}
+
+.cartProp {
+  position: relative;
+  top: 5px;
+  border-spacing: 20px;
+  line-height: inherit;
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.itemProp{
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+}
+
+.total{
+  position: relative;
+  top: 5px;
+  line-height: inherit;
+  font-size: 25px;
+  overflow: hidden;
+  color: white;
+}
+.basket-button{
+  margin-right: 12px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.btn {
+  position: relative;
+  top: 5px;
+  line-height: inherit;
+  font-size: 25px;
+  overflow: hidden;
+}
+
+
+.header {
+  position: relative;
+}
+
+.corner-image {
+  display: flex;
+  padding-left: 1350px;
+  margin: 0;
+}

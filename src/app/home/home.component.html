@@ -1,0 +1,116 @@
+<div>
+    <mat-toolbar color="primary" class="toolbar">
+        <div class="logo">
+            <img src="assets/ph-logo-nav.png" alt="Logo" width="45" height="45">
+        </div>
+        <div class="spacer"></div>
+        <div class="right-align">
+            <button mat-button class="transparent-button" routerLink="/home">Home</button>
+            <button mat-button class="transparent-button" routerLink="/profile">Profile</button>
+            <select class="transparent-button" [(ngModel)]="selectedCategory">
+                <option value="All">All</option>
+                <option value="Sweatshirt">Sweatshirts</option>
+                <option value="Shirt">Shirts</option>
+                <option value="T-Shirt">TShirts</option>
+                <option value="Jacket">Jackets</option>
+                <option value="Blazzer">Blazzers</option>
+            </select>
+            <button mat-button class="transparent-button" routerLink="/logut" >Logout</button>
+
+            <button mat-button class="transparent-button" (click)="logout()"></button>
+
+            <button class="basket-button">
+                <img src="assets/ph-basket-logo.png" routerLink="/cart" alt="Basket" width="36" height="36">
+            </button>
+        </div>
+    </mat-toolbar>
+</div>
+
+<div class="center-container">
+
+    <input  type="text" [(ngModel)]="searchQuery">
+
+    <button (click)="search()">  Search</button>
+    <div class="search"   *ngIf="showSearchSection">
+        <div  *ngFor="let clothes of filterdItems">
+            <mat-card-header class="overlay">
+                <img mat-card-image class="book-card" [src]="clothes.image" alt="{{ clothes.name }} image" width="130" height="200">
+            </mat-card-header>
+            <mat-list class="pr"> {{clothes.price | currency }}$ </mat-list>
+            <mat-card-title class="txt">{{ clothes.name }}</mat-card-title>
+            <mat-card-subtitle  class="txt">Brand: {{ clothes.brand }}</mat-card-subtitle>
+            <mat-card-subtitle  class="txt">Descripiton: {{ clothes.description}}</mat-card-subtitle>
+            <div *ngFor="let clothes of filterdItems">
+                    <label for="size{{clothes.clothesId}}">Select Size:</label>
+                    <div class="transparent-button" id="size{{clothes.clothesId}}" [(ngModel)]="clothes.size" name="size{{clothes.clothesId}}">
+                        <span *ngFor="let size of ['S','M', 'L', 'XXL', '2XL', '3XL']; let i = index">
+    <span *ngIf="i === parseInt(clothes.size)">{{ size }}</span>
+</span>
+
+
+                    </div>
+            </div>
+
+            <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon *ngIf="i < clothes.stars">
+                <img mat-card-image  [src]="clothes.stars" srcset="assets/star1.png" alt="{{ clothes.name }} image" width="25" height="25">
+              </mat-icon>
+              <mat-icon *ngIf="i >= clothes.stars">
+                <img mat-card-image  [src]="clothes.stars" srcset="assets/star0.png" alt="{{ clothes.name }} image" width="25" height="25">
+              </mat-icon>
+            </span>
+            <p>{{ clothes.manufacture_date | date: 'MMMM/YYYY' }}</p>
+        </div>
+    </div>
+    <div class="sorting-options">
+        <button class="transparent-button" (click)="sortByPrice()">Price</button>
+      <!--  <button class="transparent-button" (click)="sortByPageNumber()">Page Number</button> -->
+        <button class="transparent-button" (click)="sortByReleaseDate()">Manifacture Date</button>
+        <!--
+        <div *ngFor="let clothes of clothes">
+                <label for="size{{clothes.clothesId}}">Select Size:</label>
+                <select class="transparent-button" id="size{{clothes.clothesId}}" [(ngModel)]="clothes.size" name="size{{clothes.clothesId}}">
+                    <option *ngFor="let sizeOption of sizes" [value]="sizeOption">{{ sizeOption }}</option>
+                </select>
+        </div>
+          -->
+    </div>
+
+
+</div>
+
+<div  *ngIf="!showSearchSection"  >
+
+    <div>
+        <div class="mat-list">
+            <div *ngFor="let clothes of filterItems()">
+                <mat-card class="mat-card2">
+                    <mat-card-header class="overlay">
+                        <img mat-card-image class="book-card" [src]="clothes.image" alt="{{ clothes.name }} image" (click)="viewBookDetails(clothes.clothesId)" routerLink="[/book-details]" width="147" height="226">
+                    </mat-card-header>
+                    <mat-card-content class="details">
+                        <span class="pr">{{clothes.price | currency }}$</span>
+                        <mat-card-title class="txt">{{ clothes.name }}</mat-card-title>
+                        <mat-card-subtitle  class="txt">Brand: {{ clothes.brand }}</mat-card-subtitle>
+                        <mat-card-subtitle  class="txt">  Descripiton: {{ clothes.description}}</mat-card-subtitle>
+                        <mat-card-subtitle  class="txt">  Size: {{ clothes.size}}</mat-card-subtitle>
+                        <mat-chip-list>
+            <span class="star" *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon  *ngIf="i < clothes.stars">
+                <img mat-card-image [src]="clothes.stars" srcset="assets/star1.png" alt="{{ clothes.name }} image" width="25" height="25">
+              </mat-icon>
+              <mat-icon *ngIf="i >= clothes.stars">
+                <img mat-card-image [src]="clothes.stars" srcset="assets/star0.png" alt="{{ clothes.name }} image" width="25" height="25">
+              </mat-icon>
+            </span>
+                        </mat-chip-list>
+                        <p class="date">{{ clothes.manufacture_date | date: 'MMMM/YYYY' }}</p>
+                    </mat-card-content>
+                </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

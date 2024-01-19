@@ -1,0 +1,81 @@
+
+.toolbar{
+  display:  flex;
+  justify-content: space-between;
+  background-color: #D0D0D0;
+}
+
+.right-align{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filler{
+  flex-grow: 1;
+}
+
+.transparent-button{
+  background-color: transparent ;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins SemiBold", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: white;
+}
+
+.transparent-button:hover{
+  transition: 3s;
+  background-color: black;
+  opacity: 85%;
+}
+.basket-button{
+  margin-right: 12px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.book-info {
+  position: relative;
+  padding-top: 20px;
+}
+
+hr {
+  height: 5px;
+  background-color: #D0D0D0;
+  border: none;
+}
+
+.product-add {
+  padding-bottom: 20px;
+}
+
+.book-info img {
+  padding-left: 20px;
+}
+
+
+
+.book-info .product-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  z-index: 1;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.textLoren{
+  display: flex;
+  width: 50%;
+  height: 20%;
+  text-align: justify;
+  background-color: white;
+  opacity: 55%;
+}
+

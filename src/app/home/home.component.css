@@ -1,0 +1,175 @@
+
+.toolbar{
+  display:  flex;
+  justify-content: space-between;
+  background-color: #D0D0D0;
+}
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+.right-align{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filler{
+  flex-grow: 1;
+}
+
+.transparent-button{
+  background-color: transparent ;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins SemiBold", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: white;
+}
+
+.transparent-button:hover{
+  transition: 3s;
+  background-color: black;
+  opacity: 85%;
+}
+
+.basket-button{
+  margin-right: 12px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+input[type="text"]{
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.search{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  box-shadow: none;
+
+}
+.mat-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+}
+.mat-card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+}
+.book-card{
+  border-radius: 14%;
+  padding-bottom: 10px;
+}
+.mat-card2 .overlay{
+  position: relative; /* add this line to allow absolute positioning */
+  background-color: #D0D0D0;
+  opacity: 100%;
+  width: 183px;
+  height: 254px;
+  border-radius: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card2 .overlay .details{
+  margin-top: 10px;
+  text-align: center;
+  position: absolute; /* add this line to position the details on top of the overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card2 .overlay .details h4{
+  margin: 0;
+  font-size: 18px;
+}
+
+.mat-card2 .overlay .details p{
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+.bookname, .bookauthor, .bookpgnumber, .date {
+  left: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.text {
+  padding: 135px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+}
+.star{
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  margin-left: 35px;
+  padding: 10px;
+}
+
+.bookname {
+  left: 10px;
+  bottom: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  align-content: center;
+
+}
+.bookauthor {
+  bottom: 45px;
+}
+
+.bookpgnumber {
+  bottom: 30px;
+}
+
+.publication-date {
+  right: 10px;
+  bottom: 10px;
+}
+.txt{
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.pr{
+  padding: 185px;
+  align-items: center;
+  text-align: center;
+}

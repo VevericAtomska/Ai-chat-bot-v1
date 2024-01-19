@@ -1,0 +1,187 @@
+/* Chat button at the bottom right */
+.chat-open-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black; /* Blue color */
+  color: white;
+  border: none;
+  font-family: "Poppins SemiBold", serif;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+.chat-open-button:hover {
+  transition: 3s;
+  background-color: lightgreen;
+  opacity: 85%;
+}
+
+/* Chat popup styling */
+.chat-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 320px;
+  max-width: 100%;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px 15px 0 0;
+  z-index: 1001; /* Above the chat button */
+  transition: transform 0.3s ease-out;
+  transform: translateY(100%); /* Start hidden below the screen */
+}
+
+
+/* When chat-opened class is added, show the chat */
+.chat-opened {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0); /* Slide into view */
+}
+
+/* Chat header with close button */
+.chat-header {
+  background: #333; /* Dark grey background */
+  color: #D0D0D0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.chat-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Chat messages area */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f4f4f4; /* Light grey background */
+}
+
+.user-message, .bot-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  color: #333;
+}
+
+.user-message {
+  background-color: #C4C4C4; /* White background for user message */
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #8E8E8E; /* Light grey background for bot message */
+  align-self: flex-start;
+}
+
+/* Jacket listing within bot messages */
+.jacket-listing {
+  border: 1px solid #bbb; /* Light grey border */
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: #fff; /* White background */
+}
+
+.jacket-info {
+  display: flex;
+  align-items: center;
+}
+
+.jacket-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.jacket-info h4 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Buttons in the jacket listing */
+.jacket-info button {
+  background-color: #005ff9; /* Blue color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.jacket-info button:hover {
+  background-color: #0041c4; /* Darker blue on hover */
+}
+
+/* Chat footer with input and send button */
+.chat-footer {
+  padding: 10px 15px;
+  background-color: #f9f9f9; /* Light grey background */
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd; /* Separator */
+}
+
+.chat-footer input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: #fff; /* White background for input */
+}
+
+.send-button {
+  background-color: white; /* Blue color */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  transition: 3s;
+  background-color: black;
+  opacity: 85%;
+}
+
+
+/* Adjust the button's SVG icon color */
+.send-button svg {
+  fill: white;
+}
+
+/* Responsiveness: Handling smaller screens */
+@media (max-width: 400px) {
+  .chat-popup {
+    right: 0;
+    bottom: 0;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+  }
+
+  .chat-open-button {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+  }
+}

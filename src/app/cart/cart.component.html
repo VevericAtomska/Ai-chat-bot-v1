@@ -1,0 +1,86 @@
+
+<mat-toolbar color="primary" class="toolbar">
+  <div class="logo">
+    <img src="assets/shirt.png" alt="Logo" width="45" height="45">
+  </div>
+  <div class="spacer"></div>
+  <div class="right-align">
+    <button mat-button class="transparent-button" routerLink="/home">Home</button>
+    <button mat-button class="transparent-button" routerLink="/profile">Profile</button>
+
+    <button mat-button class="transparent-button" routerLink="/logut" >Logout</button>
+    <button class="basket-button">
+      <img ngSrc="assets/ph-basket-logo.png" routerLink="/cart" alt="Basket" width="36" height="36">
+    </button>
+  </div>
+</mat-toolbar>
+
+
+<div class="cart-container">
+<div class="cart">
+  <h2 class="editH2">SHOPPING</h2>
+  <h2 class="editH3">CART</h2>
+  <table>
+    <thead>
+    <tr>
+        <th class="cartProp">Name</th>
+        <th class="cartProp">Price</th>
+        <th class="cartProp">Size</th>
+        <th class="cartProp">Quantity</th>
+        <th class="cartProp">Total</th>
+        <th class="cartProp">Status</th>
+        <th class="cartProp">Action</th>
+      </tr>
+      </thead>
+    <tbody>
+
+    <tr *ngFor="let item of cartItems">
+
+      <td class="itemProp">{{ item.name }}</td>
+      <td class="itemProp">{{ item.price | currency }}</td>
+      <td class="itemProp">{{ item.size }}</td>
+      <td class="itemProp">{{ item.quantity }}</td>
+      <td class="itemProp">{{ item.price * item.quantity | currency }}</td>
+      <td class="itemProp">{{ item.status }} </td>
+      <td>
+      <select [(ngModel)]="item.status" [disabled]="!editMode || item !== selectedCartItem " >
+        <option  value="In progress">In progress</option>
+        <option  value="Arrived">Arrived</option>
+        <option  value="Cancelled">Cancelled</option>
+      </select>
+      </td>
+      <td>
+      <button (click)="editCartItem(item)" [disabled]="editMode" class="cartProp">Edit</button>
+      </td>
+      <td>
+        <div *ngIf="item.status === 'Arrived'">
+          <div class="rating">
+        <span class="star" *ngFor="let _ of [1, 2, 3, 4, 5]" (click)="rateBook(item, _)">
+          <ng-container *ngIf="_ <= item.rating">&#9733;</ng-container>
+          <ng-container *ngIf="_ > item.rating">&#9734;</ng-container>
+        </span>
+          </div>
+        </div>
+      </td>
+      <td class="btn small-btn" *ngIf="editMode && item === selectedCartItem " >
+        <button class="btn" (click)="increaseQuantity(item)" [disabled]="item.status === 'Arrived'|| item.status === 'Cancelled'" >+</button>
+          {{ item.quantity }}
+        <button class="btn" (click)="decreaseQuantity(item)" [disabled]="item.status === 'Arrived' || item.status === 'Cancelled'" >-</button></td>
+
+      <td  class="btn small-btn" *ngIf="editMode && item === selectedCartItem " >
+        <button class="btn" (click)="saveCartItem()" >Save</button>
+        <button class="btn" (click)="cancelEdit()" >Cancel</button>
+        <button class="btn" (click)="removeFromCart(item)" [disabled]="item.status === 'Arrived'" >Remove</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="total">
+    <h3 class="total">Total: {{ getTotal() | currency }}</h3>
+    <button class="checkout-btn"(click)="checkout()">Checkout</button>
+  </div>
+</div>
+</div>
+<div>
+<img class="corner-image" src="/assets/man1.png" alt="Corner Image">
+</div>

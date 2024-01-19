@@ -1,0 +1,163 @@
+
+.toolbar{
+  display:  flex;
+  justify-content: space-between;
+  background-color: #D0D0D0;
+}
+.transparent-button:hover{
+  transition: 3s;
+  background-color: black;
+  opacity: 85%;
+}
+.right-align{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filler{
+  flex-grow: 1;
+}
+
+.form-control {
+  width: 25%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 70%;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 5px;
+  line-height: 20px;
+  text-align: center;
+  margin-left: 500px;
+}
+.form-control:hover {
+  background-color: #D0D0D0;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.form-control:-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.form-control::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+
+.transparent-button{
+  background-color: transparent ;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins SemiBold", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: white;
+}
+
+.buttonGenres{
+  background-color: #CD853F;
+  border: none;
+  cursor: pointer;
+  font-family: "antipol-variable", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: #E9C67B;
+  margin-left: 40px;
+}
+.buttonGenres:hover {
+  transition: 1ms;
+  background-color: #D0D0D0;
+  opacity: 100%;
+}
+
+.buttonAddGenres{
+  background-color: #CD853F;
+  border: none;
+  cursor: pointer;
+  font-family: "antipol-variable", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  color: #E9C67B;
+  margin-left: 500px;
+  margin-top: 8px;
+}
+
+.buttonAddGenres:hover {
+  transition: 1ms;
+  background-color: #D0D0D0;
+  opacity: 100%;
+}
+.basket-button{
+  margin-right: 12px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.edit {
+  display: inline-block;
+  width: 50px;
+  color: white;
+  font-size: 22px;
+  margin-left: 200px;
+  padding-left: 150px;
+}
+
+.editH2{
+  display: inline-block;
+  width: 50px;
+  color: white;
+  font-size: 43px;
+  font-family: "Poppins Black", sans-serif;
+  margin-left: 600px;
+  padding-left: 150px;
+}
+
+.editH3 {
+  display: inline-block;
+  width: 50px;
+  color: white;
+  font-size: 43px;
+  font-family: "Poppins Black", sans-serif;
+  margin-left: 400px;
+  padding-left: 150px;
+}
+
+.btn-primary {
+  background-color: black;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 1s;
+  border-right: 40px;
+  letter-spacing: 3px;
+  line-height: 25px;
+  margin-left: 1065px;
+}
+
+.btn-primary:hover {
+  background-color: #D0D0D0;
+  opacity: 40%;
+}
+
+.genres {
+  margin-left: 350px;
+}
+
+.editImage {
+  margin-left: 350px;
+}
+

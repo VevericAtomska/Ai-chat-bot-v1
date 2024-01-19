@@ -1,0 +1,159 @@
+.register-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 10%;
+  padding-top: 180px;
+}
+
+
+.form-main {
+  border-radius: 50%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding-left: 120px;
+}
+
+.form-group label {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 22px;
+  color: lavenderblush;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  color: black;
+
+}
+
+.formControl {
+  width: 100%;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #fff;
+  opacity: 70%;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.btn-primery {
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 1s;
+  border-right: 40px;
+  letter-spacing: 3px;
+  line-height: 15px;
+  margin-left: 120px;
+}
+
+.btn-primery:hover {
+  background-color: #D0D0D0;
+  opacity: 40%;
+}
+
+.register {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-secondary {
+  position: absolute;
+  margin: 0 auto;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  border-radius: 64%;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 1s;
+  border-right: 40px;
+  top: 55px;
+  left: 24px;
+  letter-spacing: 3px;
+  line-height: 15px;
+  opacity: 100%;
+  background-color: transparent;
+  border: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: #D0D0D0;
+  opacity: 100%;
+}
+
+.formControl:focus {
+  outline: none;
+}
+
+.formControl::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.formControl:-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.formControl::-moz-placeholder {
+  color: #9b9b9b;
+}
+
+.formControl:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+@media screen and (max-width: 768px) {
+  .register-container {
+    margin: 5% auto;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .formControl {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .btn-primery {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .btn-secondary {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .register-container {
+    margin: 2% auto;
+  }
+
+  .form-group label {
+    font-size: 16px;
+  }
+}
+
+
+.man2 {
+  margin-left: 1150px;
+  margin-top: 500px;
+
+}

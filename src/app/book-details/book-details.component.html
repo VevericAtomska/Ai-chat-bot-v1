@@ -1,0 +1,116 @@
+<mat-toolbar color="primary" class="toolbar">
+    <div class="logo">
+      <img src="assets/shirt.png" alt="Logo" width="45" height="45">
+    </div>
+    <div class="spacer"></div>
+    <div class="right-align">
+      <button mat-button class="transparent-button" routerLink="/home">Home</button>
+      <button mat-button class="transparent-button" routerLink="/profile">Profile</button>
+
+      <button mat-button class="transparent-button" routerLink="/logut" >Logout</button>
+      <button class="basket-button">
+        <img ngSrc="assets/ph-basket-logo.png" routerLink="/cart" alt="Basket" width="36" height="36">
+      </button>
+    </div>
+  </mat-toolbar>
+  <div class="book-details" *ngIf="clothe">
+    <div class="book-info">
+      <img [src]="clothe.image" alt="{{ clothe.name }} image" width="20%" height="20%">
+      <div class="overlay"></div>
+      <div class="product-details">
+        <p>{{ clothe.name }}</p>
+        <p>Brand: {{ clothe.brand }}</p>
+        <p>Description: {{ clothe.description }}</p>
+        <p>Price: {{ clothe.price | currency }}</p>
+        <div class="product-add">
+          <span class="product-qty">
+            <button (click)="decreaseQuantity()">-</button>
+            <span>{{ quantity }}</span>
+            <button (click)="increaseQuantity()">+</button>
+          </span>
+            <select [(ngModel)]="selectedSize" name="selectedSize" required>
+                <option *ngFor="let size of clothe.size" [value]="size" required>{{ size }}</option>
+            </select>
+          <button (click)="onAddToBasket()" [disabled]="!selectedSize">Add to cart</button>
+            <p *ngIf="!selectedSize" style="color: black; font-family: 'Poppins SemiBold', sans-serif">Please choose a size</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="user-info">
+      <img ngSrc="/assets/ph-user.png" alt="User Profile Picture" width="59" height="59">
+      <div class="user-comment">
+        <h2>{{ user.name }}</h2>
+        <p class="textLoren">Nam varius pellentesque magna. Curabitur risus odio, imperdiet ac sapien ut, tempor porttitor arcu. Suspendisse euismod consectetur ante, et auctor mauris pharetra ut. Maecenas non lectus volutpat, fermentum ligula et, mollis elit. Cras dictum ex vel ullamcorper lacinia. Nunc non eros quis purus tristique laoreet vel ut sem. Integer porttitor luctus ipsum non feugiat. In commodo at massa sed pellentesque. Ut gravida et enim eget scelerisque. Aliquam mollis consectetur tempus. Fusce eleifend nec sem a ullamcorper. Praesent ultricies, eros id vehicula porta, arcu risus ornare quam, in sollicitudin orci tellus vel quam. Nullam metus elit, faucibus egestas leo eget, malesuada rutrum metus.</p>
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon *ngIf="i < clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star1.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+              <mat-icon *ngIf="i >= clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star0.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+            </span>
+        <br/>
+        <button (click)="showComment()">Comment</button>
+        <p>{{ user.comment }}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="user-info">
+      <img ngSrc="/assets/ph-user-female.png" alt="User Profile Picture" width="59" height="59">
+      <div class="user-comment">
+        <h2>{{ user.name }}</h2>
+        <p class="textLoren">Nam varius pellentesque magna. Curabitur risus odio, imperdiet ac sapien ut, tempor porttitor arcu. Suspendisse euismod consectetur ante, et auctor mauris pharetra ut. Maecenas non lectus volutpat, fermentum ligula et, mollis elit. Cras dictum ex vel ullamcorper lacinia. Nunc non eros quis purus tristique laoreet vel ut sem. Integer porttitor luctus ipsum non feugiat. In commodo at massa sed pellentesque. Ut gravida et enim eget scelerisque. Aliquam mollis consectetur tempus. Fusce eleifend nec sem a ullamcorper. Praesent ultricies, eros id vehicula porta, arcu risus ornare quam, in sollicitudin orci tellus vel quam. Nullam metus elit, faucibus egestas leo eget, malesuada rutrum metus.</p>
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon *ngIf="i < clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star1.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+              <mat-icon *ngIf="i >= clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star0.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+            </span>
+        <br/>
+        <button (click)="showComment()">Comment</button>
+        <p>{{ user.comment }}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="user-info">
+      <img ngSrc="/assets/ph-user.png" alt="User Profile Picture" width="59" height="59">
+      <div class="user-comment">
+        <h2>{{ user.name }}</h2>
+        <p class="textLoren">Nam varius pellentesque magna. Curabitur risus odio, imperdiet ac sapien ut, tempor porttitor arcu. Suspendisse euismod consectetur ante, et auctor mauris pharetra ut. Maecenas non lectus volutpat, fermentum ligula et, mollis elit. Cras dictum ex vel ullamcorper lacinia. Nunc non eros quis purus tristique laoreet vel ut sem. Integer porttitor luctus ipsum non feugiat. In commodo at massa sed pellentesque. Ut gravida et enim eget scelerisque. Aliquam mollis consectetur tempus. Fusce eleifend nec sem a ullamcorper. Praesent ultricies, eros id vehicula porta, arcu risus ornare quam, in sollicitudin orci tellus vel quam. Nullam metus elit, faucibus egestas leo eget, malesuada rutrum metus.</p>
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon *ngIf="i < clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star1.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+              <mat-icon *ngIf="i >= clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star0.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+            </span>
+        <br/>
+        <button (click)="showComment()">Comment</button>
+        <p>{{ user.comment }}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="user-info">
+      <img ngSrc="/assets/ph-user-female.png" alt="User Profile Picture" width="59" height="59">
+      <div class="user-comment">
+        <h2>{{ user.name }}</h2>
+        <p class="textLoren">Nam varius pellentesque magna. Curabitur risus odio, imperdiet ac sapien ut, tempor porttitor arcu. Suspendisse euismod consectetur ante, et auctor mauris pharetra ut. Maecenas non lectus volutpat, fermentum ligula et, mollis elit. Cras dictum ex vel ullamcorper lacinia. Nunc non eros quis purus tristique laoreet vel ut sem. Integer porttitor luctus ipsum non feugiat. In commodo at massa sed pellentesque. Ut gravida et enim eget scelerisque. Aliquam mollis consectetur tempus. Fusce eleifend nec sem a ullamcorper. Praesent ultricies, eros id vehicula porta, arcu risus ornare quam, in sollicitudin orci tellus vel quam. Nullam metus elit, faucibus egestas leo eget, malesuada rutrum metus.</p>
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon *ngIf="i < clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star1.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+              <mat-icon *ngIf="i >= clothe.stars">
+                <img mat-card-image  [src]="clothe.stars" srcset="assets/star0.png" alt="{{ clothe.name }} image" width="25" height="25">
+              </mat-icon>
+            </span>
+        <br/>
+        <button (click)="showComment()">Comment</button>
+        <p>{{ user.comment }}</p>
+      </div>
+      <hr>
+    </div>
+  </div>

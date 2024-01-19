@@ -1,0 +1,66 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="logo">
+    <img src="assets/shirt.png" alt="Logo" width="45" height="45">
+  </div>
+  <div class="spacer"></div>
+  <div class="right-align">
+    <button mat-button class="transparent-button" routerLink="/home">Home</button>
+    <button mat-button class="transparent-button" routerLink="/profile">Profile</button>
+    <button mat-button class="transparent-button" routerLink="/logut" >Logout</button>
+    <button class="basket-button">
+      <img ngSrc="assets/ph-basket-logo.png" routerLink="/cart" alt="Basket" width="36" height="36">
+    </button>
+  </div>
+</mat-toolbar>
+
+<h2 class="editH2">Profile</h2><h2 class="editH3">Edit</h2>
+<form (ngSubmit)="onSave()">
+
+  <img ngSrc="/assets/ph-user-female.png" alt="User Profile Picture" width="59" height="59" class="editImage">
+  <br/>
+  <div>
+    <label for="name" class="edit">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="user.name" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="surname" class="edit">Surname:</label>
+    <input type="text" id="surname" name="surname" [(ngModel)]="user.surname" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="email" class="edit">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="password" class="edit">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="repeatPassword" class="edit">Repeat Password:</label>
+    <input type="password" id="repeatPassword" name="repeatPassword" [(ngModel)]="user.repeatPassword" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="address" class="edit">Address:</label>
+    <input type="text" id="address" name="address" [(ngModel)]="user.address" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="phone" class="edit">Phone:</label>
+    <input type="tel" id="phone" name="phone" [(ngModel)]="user.phone" class="form-control" required>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="gender" class="edit">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="user.gender" class="form-control" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  </div>
+  <br/>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+

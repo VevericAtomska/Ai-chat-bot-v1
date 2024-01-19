@@ -1,0 +1,15 @@
+@import url("https://fonts.adobe.com/fonts/antipol-variable");
+
+*{
+  box-sizing: border-box;
+  font-family: "antipol-variable", sans-serif;
+  font-variation-settings: 'wdth' 100, 'wght' 400, 'STCH' 1;
+
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/backgroundv2.jpg");
+
+}
